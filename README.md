@@ -53,11 +53,11 @@ O docker exec faz com que os comandos sejam executados dentro do terminal do prÃ
 
 - `http://localhost:8001/api/v1/atendimentos?data_atendimento=2023-12-19&condicao_saude=diabetes`
   
-   - Retorna os atendimentos para diabetes na data de 2023-12-19
+   - Retorna os atendimentos para diabetes na data 2023-12-19
 
 - `http://localhost:8001/api/v1/atendimentos?condicao_saude=hipertensao&data_atendimento=2024-01-08&unidade=Daniela`
   
-   - Retorna os atendimentos para hipertensao na data de 2024-01-08, na unidade de saude Daniela.
+   - Retorna os atendimentos para hipertensao na data 2024-01-08, na unidade de saude Daniela
 
 ### Dessa forma, vocÃª pode combinar os filtros de acordo com a sua necessidade.
 

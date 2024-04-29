@@ -43,7 +43,9 @@ Quando esse comando é executado, ele realiza o build da aplicação caso ainda 
 
 -     docker exec esus-web-api-1 flask atendimento load-csv
 
-   - Caso tenha utilizado versões mais antigas do docker e docker-compose, verificar o nome ou id do containner utilizando o comando `docker ps`. Substitua o nome ou o id no lugar de `esus-web-api-1 ` na execução dos comandos. Por exemplo: `docker exec id-ou-nome-do-containner-aqui flask db init `
+   - Caso tenha utilizado versões mais antigas do docker e docker-compose, verificar o nome ou id do containner utilizando o comando `docker ps`. Substitua o nome ou o id no lugar de `esus-web-api-1 ` na execução dos comandos.
+   - Por exemplo:
+      -  `docker exec id-ou-nome-do-containner-aqui flask db init `
 
 O docker exec faz com que os comandos sejam executados dentro do terminal do prórprio container, o "flask atendimento load-csv" é um custom command para ler o arquivo csv, organizar os cabeçalho das colunas, formatar as datas para o padrão YYYY-mm-dd e em seguida injetar os dados formatados do csv na base de dados pgdata, do Postgres.
 

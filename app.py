@@ -1,4 +1,4 @@
-from flask import Flask, Blueprint
+from flask import Flask
 from helper.database import db, migrate
 from helper.api import api, blueprint
 from helper.cors import cors
@@ -11,9 +11,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:94X0kNnpftJ1@db-p
 db.init_app(app)
 migrate.init_app(app, db)
 
-atendimento_blueprint = Blueprint('atendimento', __name__)
-
-@atendimento_blueprint.cli.command('load-csv')
+@blueprint.cli.command('load-csv')
 def load_csv():
     # Carrega o CSV
     df = pd.read_csv('atendimentos.csv')
@@ -43,7 +41,6 @@ def load_csv():
     
     print('Dados do CSV carregados com sucesso!')
 
-app.register_blueprint(atendimento_blueprint)
 app.register_blueprint(blueprint)
 
 if __name__ == '__main__':

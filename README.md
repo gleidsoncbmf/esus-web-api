@@ -1,6 +1,6 @@
 # esus-web-api
 Docker Api Flask Restfull + Postgres para consulta de dados de Saúde 
-# Requisitos para Inicialização da Aplicação
+## Requisitos para Inicialização da Aplicação
 A Aplicação utiliza Docker e Docker-Compose:
 
 ## Verifique se você os têm istalados em sua máquina com os seguintes comandos:
@@ -29,9 +29,9 @@ docker-compose up -d
 
 Quando esse comando é executado, ele realiza o build da aplicação caso ainda não tenha sido construída e também sobe os containers em background. Após a finalização, a aplicação estará disponível em http://localhost:8001/api/v1/
 
-# Carga no Banco de Dados(Primeira Inicialização)
+## Carga no Banco de Dados(Primeira Inicialização)
 
-## Caso seja a primeira inicialização da aplicação, será necessário realizar a carga no banco de dados, para isso execute os seguintes comandos:
+### Caso seja a primeira inicialização da aplicação, será necessário realizar a carga no banco de dados, para isso execute os seguintes comandos:
 
 docker exec esus-web-api-1 flask db init
 
@@ -45,13 +45,13 @@ O docker exec faz com que os comandos sejam executados dentro do terminal do pr�
 
 # Utilizando a Aplicação:
 
-## Após isso, a aplicação estará disponível para ser utilizada com os filtros de busca, a busca está sendo realizada no estilo "ilike". Aqui estão alguns exemplos de consultas que você pode utilizar:
+## Após isso, a aplicação estará disponível para ser utilizada com os filtros de busca. Aqui estão alguns exemplos de consultas que você pode utilizar:
 
 http://localhost:8001/api/v1/atendimentos  :  retorna todos os atendimentos
 
 http://localhost:8001/api/v1/atendimentos?data_atendimento=2023-12-19&condicao_saude=diabetes  :  retorna os atendimentos para diabetes na data de 2023-12-19
 
-http://localhost:8001/api/v1/atendimentos?condicao_saude=ferida vascular&data_atendimento=2023-10-09&unidade=Daniela  :  retorna os atendimentos para ferida vascular na data de 2023-10-09, na unidade de saude Daniela.
+http://localhost:8001/api/v1/atendimentos?condicao_saude=hipertensao&data_atendimento=2024-01-08&unidade=Daniela  :  retorna os atendimentos para hipertensao na data de 2024-01-08, na unidade de saude Daniela.
 
 Dessa forma, você pode combinar os filtros de acordo com a sua necessidade.
 

@@ -41,7 +41,7 @@ docker exec esus-web-api-1 flask db upgrade
 
 docker exec esus-web-api-1 flask atendimento load-csv
 
-O docker exec faz com que os comandos sejam executados dentro do terminal do prórprio container, o "flask atendimento load-csv" é um custom command para ler o arquivo csv, organizar cabeçalho das duas primeiras colunas, formatar as datas para o padrão YYYY-mm-dd e em seguida injetar os dados formatados do csv no banco de dados pgdata, do Postgres.
+O docker exec faz com que os comandos sejam executados dentro do terminal do prórprio container, o "flask atendimento load-csv" é um custom command para ler o arquivo csv, organizar o cabeçalho das duas primeiras colunas, formatar as datas para o padrão YYYY-mm-dd e em seguida injetar os dados formatados do csv no banco de dados pgdata, do Postgres.
 
 # Utilizando a Aplicação:
 

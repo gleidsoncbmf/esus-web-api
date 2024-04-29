@@ -3,7 +3,7 @@ Docker Api Flask Restfull + Postgres para consulta de dados de Saúde
 ## Requisitos para Inicialização da Aplicação
 A Aplicação utiliza Docker e Docker-Compose:
 
-## Verifique se você os têm istalados em sua máquina com os seguintes comandos:
+## Verifique se você os têm instalados em sua máquina com os seguintes comandos:
 
 docker --version
 

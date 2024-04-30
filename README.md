@@ -29,6 +29,8 @@
 
 -     docker-compose up -d
 
+   - Obs: Caso tenha feito a instalação do docker e docker-compose através do `docker desktop`, certifique-se de que o aplicativo esteja em execução, isso é necessário para não haver erros na execução do comando. 
+
 Quando esse comando é executado, ele realiza o build da aplicação caso ainda não tenha sido construída e também sobe os containers em background. Após a finalização, a aplicação estará disponível em `http://localhost:8001/api/v1/`
 
 # Carga no Banco de Dados(Primeira Inicialização)
